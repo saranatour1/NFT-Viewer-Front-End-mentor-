@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@300;400;600&family=Roboto&family=Source+Serif+Pro:wght@300;400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Source Serif Pro", serif;
+}
+body {
+  background-color: hsl(217, 54%, 11%);
+  width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.card {
+  background-color: hsl(216, 50%, 16%);
+  width: 27em;
+  height: 41em;
+  margin: 4em auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  box-shadow: 0px 5px 5px 10px hsla(0, 0%, 0%, 0.2);
+}
+.card-inner {
+  margin: 0 auto;
+  width: 90%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+img.main {
+  width: 98%;
+  margin: 1em auto;
+  border-radius: 18px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 98%;
+  height: 92%;
+  border-radius: 18px;
+  z-index: 1;
+  background-color: hsla(
+    178,
+    100%,
+    50%,
+    0.337
+  ); /* set the desired background color */
+  opacity: 0;
+  transition: opacity 0.3s ease-out; /* add a transition effect */
+}
+.image-container:hover::before {
+  opacity: 1;
+}
+
+.image-container .svg {
+  display: none;
+}
+
+.image-container:hover .svg {
+  position: absolute;
+  top: 45%;
+  left: 46%;
+  z-index: 1;
+  display: block;
+  cursor: pointer;
+}
+
+.information {
+  width: 95%;
+  margin: 0 auto;
+  text-align: left;
+}
+.information h5 {
+  font-size: 25px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 10px;
+}
+.information h5:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.text {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  word-wrap: break-word;
+  word-break: normal;
+  /* max-width: 89%; */
+  letter-spacing: 0.8px;
+  line-height: 1.5;
+  margin-bottom: 9px;
+}
+.line-text {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  margin: 1em auto;
+  width: 100%;
+  align-items: center;
+}
+
+.eth {
+  flex: 0.45;
+  color: hsl(178, 100%, 50%);
+  font-size: 18px;
+}
+.eth img {
+  vertical-align: middle;
+  padding-bottom: 6px;
+  padding-right: 2px;
+}
+.time-pass {
+  flex: 0.4;
+  text-align: right;
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+}
+.time-pass img {
+  padding-left: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+  padding-bottom: 5px;
+}
+
+.avtar {
+  margin-top: 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.avtar img {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+.avtar span {
+  letter-spacing: 1px;
+  padding-right: 0.12em;
+  word-spacing: 1px;
+}
+.small-text {
+  padding-left: 0.9em;
+  color: hsl(215, 51%, 70%);
+}
+.white-text {
+  padding-left: 0.4em;
+  color: hsl(0, 0%, 100%);
+}
+
+.white-text:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    width: 375px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+  .card {
+    background-color: hsl(216, 50%, 16%);
+    width: 20em;
+    height: 35em;
+    margin: 4em auto;
+  }
+}
